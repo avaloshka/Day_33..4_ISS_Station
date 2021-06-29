@@ -30,7 +30,7 @@ def is_night():
         "formatted": 0,
     }
 
-    response = requests.get("https://api.sunrise-sunsen.org/json", params=parameters)
+    response = requests.get("https://api.sunrise-sunset.org/json", params=parameters)
     response.raise_for_status()
     data = response.json()
     sunrise = int(data["results"]["sunrise"].split("T")[1].split(":")[0])
